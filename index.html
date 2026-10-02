@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieExpress</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header -->
+     
+         <nav>
+             <div class="logo">
+            <span class="badge">FE</span>
+            <span class="text">Foodie<span>Express</span></span>
+
+        </div>
+            <div>
+             <a href="#">Home</a>
+            <a href="#recipes">Recipes</a>
+            <a href="#categories">Categories</a>
+        </div>
+        </nav>
+        
+    
+
+    <!-- Hero-text -->
+
+    <div class="hero">
+        <div class="hero-text">
+              <h1>Delicious Food Delivered Fast</h1>
+            <p>Order fresh meals from top chefs right to your door</p>
+        </div>
+        
+
+
+        <div class="search">
+            <input type="text" id="search" placeholder="Search recipes...">
+            <button onclick="searchRecipes()">Search</button>
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5YieZtbJoU8hHoD0ceNN1JnG4vjm-3tabklDFtQu0pDASUsR_NFWqJ7r8&s=10"
+         height="200">
+    </div>
+
+    <!-- Section  recipes -->
+
+    <section id="recipes">
+        <h2 class="section-title">Order our best food option</h2>
+
+        <div class="categories" id="categories">
+            <button onclick="filterRecipes('all')">All</button>
+             <button onclick="filterRecipes('Breakfast')">Breakfast</button>
+              <button onclick="filterRecipes('Lunch')">Lunch</button>
+               <button onclick="filterRecipes('Dinner')">Dinner</button>
+                <button onclick="filterRecipes('Dessert')">Dessert</button>
+        </div>
+
+        <div class="recipes" id="recipesList">
+
+            <!-- Breakfast -->
+
+              <div class="card" data-category="Breakfast" data-name="Pancake">
+                <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=600&q=80"
+                height="200" alt="Pancake">
+
+                 <div class="card-content">
+                <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Pancake</h3>
+                <p class="info">⭐ 4.8 &nbsp; ⏱ 20 min</p>
+                <p>Breakfast</p>
+            </div>
+            </div>
+
+
+
+             <div class="card" data-category="Breakfast" data-name="Poha">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo9RtQOGeWO8RLkR20g5gDkjAZ3Y0pRsnPh33n_JbpsmaZN5AVldgFBMggI3Cj0Uh_372-C22W3GU3WcxkQKTT56p9mQt0jNTXJGqy9bLG&s=10"
+                height="200" alt="Poha">
+
+                <div class="card-content">
+                    <button class="favorite" onclick="favorite(this)">♡</button>
+                    <h3>Poha</h3>
+                    <p class="info">⭐ 4.9 &nbsp; ⏱ 30 min</p>
+                    <p>Breakfast</p>
+                </div>
+            </div>
+
+
+
+            <div class="card" data-category="Breakfast" data-name="Rava Upma">
+                <img src="https://d1uz88p17r663j.cloudfront.net/original/ba32df908435796279e3d79f0d5fbdc1_Rava_Upma_-_Twist.jpg"
+                height="200" alt="Rava Upma">
+
+                <div class="card-content">
+                    <button class="favorite" onclick="favorite(this)">♡</button>
+                    <h3>Rava Upma</h3>
+                    <p class="info">⭐ 4.7 &nbsp; ⏱ 25 min</p>
+                    <p>Breakfast</p>
+                </div>
+            </div>
+
+
+          <div class="card" data-category="Breakfast" data-name="Dosa">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTpx-mRoi4FMCUo6rZTzwkl-ZxCQ_pkJFVoEXrVEassQ&s=10"
+            height="200"  alt="Dosa">
+
+            <div class="card-content">
+                <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Dosa</h3>
+                <p class="info">⭐ 4.6 &nbsp; ⏱ 20 min</p>
+                <p>Breakfast</p>
+            </div>
+          </div>
+
+          <!-- Lunch -->
+
+          
+         <div class="card" data-category="Lunch" data-name="Buffalo Chicken Wraps">
+            <img src="https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Buffalo-Chicken-Wrap-3.jpg"
+            height="200" alt="Buffalo Chicken-Wraps">
+
+            <div class="card-content">
+                <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Buffalo Chicken Wraps</h3>
+                <p class="info">⭐ 4.9 &nbsp; ⏱ 20 min</p>
+                <p>Lunch</p>
+            </div>
+        </div>
+
+        <div class="card" data-category="Lunch" data-name="Chicken Biryani">
+            <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg"
+            height="200" alt="Chicken Biryani"> 
+
+               <div class="card-content">
+                <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Chicken biryani</h3>
+                <p class="info">⭐ 4.9 &nbsp; ⏱ 30 min</p>
+                <p>Lunch</p>
+            </div>    
+        </div>
+
+        <div class="card" data-category="Lunch" data-name="Aloo Paratha">
+            <img src="https://www.myspicykitchen.net/wp-content/uploads/2019/05/Aloo-Paratha-500x500.jpg"
+            height="200" alt="Aloo Paratha">
+            
+            <div class="card-content">
+                <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Aloo Paratha</h3>
+                <p class="info">⭐ 4.9 &nbsp; ⏱ 25 min</p>
+                <p>Lunch</p>
+            </div>    
+        </div> 
+
+        <div class="card" data-category="Lunch" data-name="Pulao / Biryani">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu12GWOWGJfRAjxv-nvU8sZINi9UtCOYzRqk9e7mSNyQHSrvbTbPGqQ8o93A6KiR8I8mk0KObQF_-083ol4His6lHDKc9F1WsjCeJxMW8&s=10"
+             height="200"   alt="Pulao / Biryani">
+
+             <div class="card-content">
+                <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Pulao / Biryani</h3>
+                <p class="info">⭐ 4.9 &nbsp; ⏱ 25 min</p>
+                <p>Lunch</p>
+             </div>
+        </div>
+
+        <div class="card" data-category="Lunch" data-name="Dal Tadka & Roti">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZidzYyjUzGjYFi7Td2KZdmNBpsWFMzhSnt23S4p2OvVzUWPatdL2qIUD4nCGPDyiDJQ45nu0fFwE8KMbCZ6ama-amkaj4UF4CbQzc3lk&s=10"
+            height="200" alt="Dal Tadka & Roti">
+            <div class="card-content">
+                 <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Dal Tadka & Roti</h3>
+                <p class="info">⭐ 4.6 &nbsp; ⏱ 20 min</p>
+                <p>Lunch</p>
+            </div>
+        </div>
+
+        <!-- Dinner -->
+
+          <div class="card" data-category="Dinner" data-name="Sambar">
+            <img src="https://shwetainthekitchen.com/wp-content/uploads/2022/01/Idli-Sambar.jpg"
+            height="200" alt="Sambar">
+
+            <div class="card-content">
+                <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Sambar</h3>
+                <p class="info">⭐ 4.9 &nbsp; ⏱ 20 min</p>
+                <p>Dinner</p>
+            </div>
+         </div>
+
+         <div class="card" data-category="Dinner" data-name="Matar Paneer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3N8y7NOP97pqy5K1qAXXGyxf3YsvotKu89thB1KvrBNTageG64cxp7A0&s=10"
+            height="200" alt="Matar Paneer">
+
+             <div class="card-content">
+                <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Matar Paneer</h3>
+                <p class="info">⭐ 4.7 &nbsp; ⏱ 25 min</p>
+                <p>Dinner</p>
+            </div>
+         </div>
+
+         <div class="card" data-category="Dinner" data-name="Veg Kurma">
+            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/veg-kurma-vegetable-korma-recipe.jpg"
+            height="200" alt="Veg Kurma">
+
+             <div class="card-content">
+                <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Veg Kurma</h3>
+                <p class="info">⭐ 4.9 &nbsp; ⏱ 30 min</p>
+                <p>Dinner</p>
+            </div>
+         </div> 
+
+         <!-- Dessert -->
+
+           <div class="card" data-category="Dessert" data-name="Chocolate chip cookies">
+            <img src="https://cdn.loveandlemons.com/wp-content/uploads/2024/08/chocolate-chip-cookie-recipe.jpg"
+            height="200" alt="Chocolate chip cookies">
+
+            <div class="card-content">
+                <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Chocolate chip cookies</h3>
+                <p class="info">⭐ 4.6 &nbsp; ⏱ 15 min</p>
+                <p>Dessert</p>
+            </div>
+          </div>
+
+         <div class="card" data-category="Dessert" data-name="Pound cake">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyi6RG8Homl2dC0WZTbbpuctieHq-AcI4V-VFok-CEfDWK7fvuSNtrRnk&s=10"
+            height="200" alt="Pound cake">
+
+             <div class="card-content">
+                <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Pound cake</h3>
+                <p class="info">⭐ 4.7 &nbsp; ⏱ 20 min</p>
+                <p>Dessert</p>
+            </div>
+         </div>
+
+         <div class="card" data-category="Dessert" data-name="Skillet brownie">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK3Oasrl6yb9vWaK6EaVtmQnmolNaE7ZZcYhSN_d6Kzr-lfdM24tUKmOAd&s=10"
+            height="200" alt="Skillet brownie">
+
+             <div class="card-content">
+                <button class="favorite" onclick="favorite(this)">♡</button>
+                <h3>Skillet brownie</h3>
+                <p class="info">⭐ 4.6 &nbsp; ⏱ 20 min</p>
+                <p>Dessert</p>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+    <p>© 2026 FoodieExpress | All Rights Reserved</p>
+
+    </footer>
+    <script src="App.js"></script>
+</body>
+</html>
